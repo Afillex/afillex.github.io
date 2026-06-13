@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ege Ayhan — Computer Science Student & Developer</title>
+  <meta name="description" content="Ege Ayhan — Computer Science student at IYTE on Erasmus in Germany. Full-stack, AI/ML, and systems software. Looking for a software-engineering internship." />
+  <meta name="author" content="Ege Ayhan" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ege Ayhan — Developer Portfolio" />
+  <meta property="og:description" content="Full-stack, AI/ML, and systems software. CS student looking for a software-engineering internship." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://afillex.github.io" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== Nav ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#top" class="nav__brand">EA<span class="dot">.</span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <a href="Ege_Ayhan_CV.pdf" class="nav__cv" download>Résumé ↓</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="top">
+    <div class="container hero__inner">
+      <p class="hero__eyebrow">👋 Hi, I'm</p>
+      <h1 class="hero__name">Ege Ayhan</h1>
+      <p class="hero__tagline">
+        Computer Science student building <span class="accent">full-stack apps</span>,
+        <span class="accent">ML tools</span>, and <span class="accent">low-level systems</span>.
+      </p>
+      <p class="hero__sub">
+        2nd-year CS @ İzmir Institute of Technology · on Erasmus in Germany 🇩🇪 ·
+        looking for a <strong>software-engineering internship</strong>.
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#projects">View my work</a>
+        <a class="btn btn--ghost" href="https://github.com/Afillex" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn btn--ghost" href="Ege_Ayhan_CV.pdf" download>Download CV ↓</a>
+      </div>
+    </div>
+    <div class="hero__scroll">scroll ↓</div>
+  </section>
+
+  <main>
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">01.</span> About me</h2>
+        <div class="about">
+          <div class="about__text">
+            <p>
+              I'm a Computer Science student at <strong>İzmir Institute of Technology (IYTE)</strong>,
+              currently on an <strong>Erasmus exchange in Germany</strong>. I learn fastest by building
+              real, working systems — so I do, across the whole stack.
+            </p>
+            <p>
+              That ranges from <strong>full-stack web apps</strong> (React, Next.js, Firebase) and
+              <strong>machine-learning tooling</strong> (PyTorch, Streamlit), all the way down to
+              <strong>bare-metal C/C++</strong> — including a custom audio-player OS I wrote for a
+              real phone. I care about how things actually work underneath, not just the framework on top.
+            </p>
+            <p>
+              I'm looking for a <strong>software-engineering internship</strong> where I can keep
+              building and learning from experienced engineers.
+            </p>
+          </div>
+          <aside class="about__facts">
+            <ul>
+              <li><span>🎓</span> CS @ IYTE (İzmir)</li>
+              <li><span>🇪🇺</span> Erasmus exchange, Germany</li>
+              <li><span>💻</span> Full-stack · AI/ML · Systems</li>
+              <li><span>🗣️</span> Turkish · English · German (B1.1)</li>
+              <li><span>📍</span> Open to internships</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section class="section section--alt" id="projects">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">02.</span> Projects</h2>
+        <p class="section__lead">A selection of things I've built. Everything here is real code that runs — links go straight to the source.</p>
+
+        <div class="filters" id="filters">
+          <button class="filter is-active" data-filter="all">All</button>
+          <button class="filter" data-filter="web">Web</button>
+          <button class="filter" data-filter="ai">AI / ML</button>
+          <button class="filter" data-filter="systems">Systems</button>
+          <button class="filter" data-filter="games">Games</button>
+        </div>
+
+        <div class="projects" id="projects-grid">
+          <!-- EgePod -->
+          <article class="card" data-cat="systems">
+            <div class="card__top">
+              <span class="card__icon">🎧</span>
+              <div class="card__links">
+                <a href="https://github.com/Afillex/EgePod" target="_blank" rel="noopener" aria-label="Source code">&lt;/&gt;</a>
+              </div>
+            </div>
+            <h3 class="card__title">EgePod</h3>
+            <p class="card__tag">Flagship · Bare-metal OS</p>
+            <p class="card__desc">A custom <strong>Digital Audio Player OS</strong> for the Redmi Note 10S. Three small C/C++ daemons drive the screen, input, and a pure ALSA audio path — with an aggressive 20–30 mA power budget. Includes a simulator so you can run it without the hardware.</p>
+            <ul class="card__stack"><li>C</li><li>C++</li><li>ALSA</li><li>Linux</li><li>IPC</li></ul>
+          </article>
+
+          <!-- GraphMaker -->
+          <article class="card" data-cat="ai web">
+            <div class="card__top">
+              <span class="card__icon">🕸️</span>
+              <div class="card__links">
+                <a href="https://github.com/Afillex/GraphMaker" target="_blank" rel="noopener" aria-label="Source code">&lt;/&gt;</a>
+              </div>
+            </div>
+            <h3 class="card__title">GraphMaker</h3>
+            <p class="card__tag">AI agents · Visualization</p>
+            <p class="card__desc">A playground for <strong>AI agents to build step-by-step proof visualizations</strong>. A C++ engine owns the graph state machine, a Node layer exposes REST + WebSocket, and the browser renders live with Cytoscape.js and KaTeX.</p>
+            <ul class="card__stack"><li>C++</li><li>Node.js</li><li>WebSocket</li><li>Cytoscape.js</li></ul>
+          </article>
+
+          <!-- CNN Explorer -->
+          <article class="card" data-cat="ai">
+            <div class="card__top">
+              <span class="card__icon">🧠</span>
+              <div class="card__links">
+                <a href="https://github.com/Afillex/cnn-explorer" target="_blank" rel="noopener" aria-label="Source code">&lt;/&gt;</a>
+              </div>
+            </div>
+            <h3 class="card__title">CNN Explorer</h3>
+            <p class="card__tag">Deep learning · Interactive</p>
+            <p class="card__desc">An interactive tool to <strong>design, train, and visualize</strong> a convolutional neural network. Tune the architecture with sliders, watch live training curves, and inspect feature maps and weight distributions.</p>
+            <ul class="card__stack"><li>Python</li><li>PyTorch</li><li>Streamlit</li></ul>
+          </article>
+
+          <!-- WG Wars -->
+          <article class="card" data-cat="web games">
+            <div class="card__top">
+              <span class="card__icon">🏰</span>
+              <div class="card__links">
+                <a href="https://github.com/Afillex/wg-wars" target="_blank" rel="noopener" aria-label="Source code">&lt;/&gt;</a>
+              </div>
+            </div>
+            <h3 class="card__title">WG Wars</h3>
+            <p class="card__tag">Real-time multiplayer game</p>
+            <p class="card__desc">A <strong>multiplayer bluff & bidding party game</strong> about the Heidelberg flat hunt. Join with a room code, collect Charm/Cooking/Cash/Deutsch cards, and out-bid your friends across timed rounds. Real-time sync via Firebase.</p>
+            <ul class="card__stack"><li>React 19</li><li>Vite</li><li>Firebase</li></ul>
+          </article>
+
+          <!-- Merchant's Keep -->
+          <article class="card" data-cat="systems games">
+            <div class="card__top">
+              <span class="card__icon">⚖️</span>
+              <div class="card__links">
+                <a href="https://github.com/Afillex/merchants-keep" target="_blank" rel="noopener" aria-label="Source code">&lt;/&gt;</a>
+              </div>
+            </div>
+            <h3 class="card__title">Merchant's Keep</h3>
+            <p class="card__tag">Game in C · raylib</p>
+            <p class="card__desc">A 2D <strong>merchant trading simulation</strong> written in C with raylib. A living economy, traveling traders, event cards, reputation, and a save system — built from small, single-purpose modules.</p>
+            <ul class="card__stack"><li>C</li><li>raylib</li><li>OpenGL</li></ul>
+          </article>
+
+          <!-- minimal-api -->
+          <article class="card" data-cat="systems web">
+            <div class="card__top">
+              <span class="card__icon">🌐</span>
+              <div class="card__links">
+                <a href="https://github.com/Afillex/minimal-api" target="_blank" rel="noopener" aria-label="Source code">&lt;/&gt;</a>
+              </div>
+            </div>
+            <h3 class="card__title">minimal-api</h3>
+            <p class="card__tag">HTTP server from scratch</p>
+            <p class="card__desc">A <strong>dependency-free HTTP API server in pure C</strong>, built directly on POSIX sockets with its own request parsing, routing, and per-endpoint handlers. A study in how web servers actually work.</p>
+            <ul class="card__stack"><li>C</li><li>POSIX sockets</li><li>HTTP</li></ul>
+          </article>
+
+          <!-- TSP Visualizer -->
+          <article class="card" data-cat="web ai">
+            <div class="card__top">
+              <span class="card__icon">📍</span>
+              <div class="card__links">
+                <a href="https://github.com/Afillex/tsp-visualizer" target="_blank" rel="noopener" aria-label="Source code">&lt;/&gt;</a>
+              </div>
+            </div>
+            <h3 class="card__title">TSP Visualizer</h3>
+            <p class="card__tag">Algorithms · Animation</p>
+            <p class="card__desc">An animated visualizer for the <strong>Traveling Salesman Problem</strong> solved with the nearest-neighbor heuristic. Step through or play the tour construction one edge at a time. Built while studying Algorithm Engineering.</p>
+            <ul class="card__stack"><li>TypeScript</li><li>React</li><li>Vite</li></ul>
+          </article>
+
+          <!-- Minesweeper -->
+          <article class="card" data-cat="games">
+            <div class="card__top">
+              <span class="card__icon">💣</span>
+              <div class="card__links">
+                <a href="https://github.com/Afillex/minesweeper" target="_blank" rel="noopener" aria-label="Source code">&lt;/&gt;</a>
+              </div>
+            </div>
+            <h3 class="card__title">Minesweeper</h3>
+            <p class="card__tag">Classic game · Recursion</p>
+            <p class="card__desc">A clean implementation of <strong>Minesweeper</strong> in Python, using a recursive flood-fill to reveal empty regions — a nice exercise in recursion and grid logic.</p>
+            <ul class="card__stack"><li>Python</li></ul>
+          </article>
+
+          <!-- Snake -->
+          <article class="card" data-cat="games">
+            <div class="card__top">
+              <span class="card__icon">🐍</span>
+              <div class="card__links">
+                <a href="https://github.com/Afillex/alternative-snake-game" target="_blank" rel="noopener" aria-label="Source code">&lt;/&gt;</a>
+              </div>
+            </div>
+            <h3 class="card__title">Snake</h3>
+            <p class="card__tag">Classic game</p>
+            <p class="card__desc">A take on the classic <strong>Snake</strong> game in Python — game loop, input handling, and growing-tail collision logic.</p>
+            <ul class="card__stack"><li>Python</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">03.</span> Skills</h2>
+        <div class="skills">
+          <div class="skills__group">
+            <h3>Languages</h3>
+            <ul><li>C</li><li>C++</li><li>Python</li><li>JavaScript</li><li>TypeScript</li><li>Java</li></ul>
+          </div>
+          <div class="skills__group">
+            <h3>Web</h3>
+            <ul><li>React</li><li>Next.js</li><li>Node.js</li><li>Vite</li><li>Firebase</li><li>REST / WebSocket</li></ul>
+          </div>
+          <div class="skills__group">
+            <h3>AI / ML</h3>
+            <ul><li>PyTorch</li><li>Streamlit</li><li>NumPy / pandas</li><li>Model visualization</li><li>LLM-agent tooling</li></ul>
+          </div>
+          <div class="skills__group">
+            <h3>Systems & Tools</h3>
+            <ul><li>Linux</li><li>ALSA / embedded</li><li>POSIX / sockets</li><li>Make / CMake</li><li>Git</li><li>raylib</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Education ===== -->
+    <section class="section section--alt" id="education">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">04.</span> Education & Languages</h2>
+        <div class="edu">
+          <div class="edu__item">
+            <div class="edu__when">2024 – 2028 <span>(expected)</span></div>
+            <div class="edu__what">
+              <h3>B.Sc. Computer Science</h3>
+              <p>İzmir Institute of Technology (IYTE) — İzmir, Türkiye</p>
+            </div>
+          </div>
+          <div class="edu__item">
+            <div class="edu__when">Exchange</div>
+            <div class="edu__what">
+              <h3>Erasmus+ Exchange</h3>
+              <p>Studying in Germany 🇩🇪 — coursework including Algorithm Engineering, German (B1.1)</p>
+            </div>
+          </div>
+          <div class="edu__item">
+            <div class="edu__when">Languages</div>
+            <div class="edu__what">
+              <h3>Turkish · English · German</h3>
+              <p>Turkish (native) · English (fluent) · German (B1.1, improving)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">05.</span> Get in touch</h2>
+        <p class="contact__lead">
+          I'm actively looking for a <strong>software-engineering internship</strong>. If you're
+          hiring, collaborating, or just want to talk shop — my inbox is open.
+        </p>
+        <a class="btn btn--primary btn--lg" href="mailto:egeayhan86@gmail.com">Say hello →</a>
+        <div class="contact__socials">
+          <a href="https://github.com/Afillex" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/ege-ayhan" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:egeayhan86@gmail.com">Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & built by Ege Ayhan · <span id="year"></span></p>
+      <p class="footer__note">Built with plain HTML, CSS & JavaScript — no frameworks.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
